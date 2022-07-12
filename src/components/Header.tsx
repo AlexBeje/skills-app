@@ -1,21 +1,21 @@
-import { Box, Text } from "@mantine/core";
+import { Box } from "@mantine/core";
 
 import Avatar from "./Avatar";
+import ProgressBar from "./ProgressBar";
 
-export default function Header({ percentage }: { percentage: number }) {
+export default function Header({
+  level,
+  percentage,
+  name,
+}: {
+  level: number;
+  percentage: number;
+  name: string;
+}) {
   return (
-    <Box className="flex items-center justify-between">
-      <Avatar />
-      <Box className="flex items-center">
-        <Text>lvl.</Text>
-        <Box className="h-2 ml-2 relative w-32">
-          <Box className="absolute bg-dark-500 h-2 w-full" />
-          <Box
-            className={`absolute bg-blue-500 h-2`}
-            style={{ width: percentage + "%" }}
-          />
-        </Box>
-      </Box>
+    <Box className="flex items-end justify-between p-4">
+      <Avatar name={name} />
+      <ProgressBar level={level} percentage={percentage} />
     </Box>
   );
 }
