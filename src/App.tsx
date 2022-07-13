@@ -4,6 +4,7 @@ import { Box } from "@mantine/core";
 
 import Header from "./components/Header";
 import Skill from "./components/Skill";
+import Menu from "./components/Menu";
 
 function App() {
   const [name] = useState("AlexBeje");
@@ -63,6 +64,7 @@ function App() {
           setPoints={handleSetPoints}
         />
       ))}
+      <Menu />
     </Box>
   );
 }

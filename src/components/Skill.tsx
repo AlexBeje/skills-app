@@ -24,9 +24,9 @@ export default function Skill({
         {skillName} ({skillPoints})
       </Text>
       <Box className="flex gap-2">
-        <Button onClick={() => handleClick(skillName, 1)}>+1</Button>
-        <Button onClick={() => handleClick(skillName, 5)}>+5</Button>
-        <Button onClick={() => handleClick(skillName, 15)}>+15</Button>
+        <Button onClick={() => handleClick(skillName, 1)} compact>+1 xp</Button>
+        <Button onClick={() => handleClick(skillName, 5)} compact>+5 xp</Button>
+        <Button onClick={() => handleClick(skillName, 15)} compact>+15 xp</Button>
       </Box>
     </Box>
   );
