@@ -1,7 +1,7 @@
 import { Box } from "@mantine/core";
 
 import Avatar from "./Avatar";
-import ProgressBar from "./ProgressBar";
+import Progress from "./Progress";
 
 export default function Header({
   level,
@@ -13,9 +13,9 @@ export default function Header({
   name: string;
 }) {
   return (
-    <Box className="flex items-end justify-between p-4">
-      <Avatar name={name} />
-      <ProgressBar level={level} percentage={percentage} />
+    <Box className="flex p-4">
+      <Avatar />
+      <Progress name={name} percentage={percentage} level={level} />
     </Box>
   );
 }

@@ -1,6 +1,6 @@
-import { Box, Image, Text, CSSObject } from "@mantine/core";
+import { Box, Image, CSSObject } from "@mantine/core";
 
-export default function Avatar({ name }: { name: string }) {
+export default function Avatar() {
   return (
     <Box className="flex items-start">
       <Image
@@ -9,12 +9,11 @@ export default function Avatar({ name }: { name: string }) {
         sx={styles}
         radius="sm"
       />
-      <Text className="ml-3">{name}</Text>
     </Box>
   );
 }
 
 // styles object is compatible with every Mantine component
 const styles: CSSObject = {
-  width: "4rem",
+  width: "5rem",
 };
